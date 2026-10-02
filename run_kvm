@@ -1,0 +1,17 @@
+#!/bin/env bash
+
+FIFO=/tmp/active_window
+
+cleanup() { kill $(jobs -pr); rm -f "$FIFO"; exit 0; }
+trap cleanup INT TERM EXIT
+
+if [[ ! -p $FIFO ]]; then
+    mkfifo $FIFO
+fi
+
+while true; do
+    [[ $(kdotool getactivewindow getwindowname) == "Projector - "* ]]
+    echo -n $? > "$FIFO"
+done &
+
+sudo ./venv/bin/python3 cynthion_kvm.py
