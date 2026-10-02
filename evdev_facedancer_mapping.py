@@ -4,14 +4,14 @@ from evdev import ecodes
 from facedancer.classes.hid.keyboard import KeyboardKeys, KeyboardModifiers
 
 ev_face_modifier_map = {
-        ecodes.KEY_LEFTCTRL: KeyboardModifiers.MOD_LEFT_CTRL,
-        ecodes.KEY_LEFTSHIFT: KeyboardModifiers.MOD_LEFT_SHIFT,
-        ecodes.KEY_LEFTALT: KeyboardModifiers.MOD_LEFT_ALT,
-        ecodes.KEY_LEFTMETA: KeyboardModifiers.MOD_LEFT_META,
-        ecodes.KEY_RIGHTCTRL: KeyboardModifiers.MOD_RIGHT_CTRL,
-        ecodes.KEY_RIGHTSHIFT: KeyboardModifiers.MOD_RIGHT_SHIFT,
-        ecodes.KEY_RIGHTALT: KeyboardModifiers.MOD_RIGHT_ALT,
-        ecodes.KEY_RIGHTMETA: KeyboardModifiers.MOD_RIGHT_META
+    ecodes.KEY_LEFTCTRL: KeyboardModifiers.MOD_LEFT_CTRL,
+    ecodes.KEY_LEFTSHIFT: KeyboardModifiers.MOD_LEFT_SHIFT,
+    ecodes.KEY_LEFTALT: KeyboardModifiers.MOD_LEFT_ALT,
+    ecodes.KEY_LEFTMETA: KeyboardModifiers.MOD_LEFT_META,
+    ecodes.KEY_RIGHTCTRL: KeyboardModifiers.MOD_RIGHT_CTRL,
+    ecodes.KEY_RIGHTSHIFT: KeyboardModifiers.MOD_RIGHT_SHIFT,
+    ecodes.KEY_RIGHTALT: KeyboardModifiers.MOD_RIGHT_ALT,
+    ecodes.KEY_RIGHTMETA: KeyboardModifiers.MOD_RIGHT_META
 }
 
 ev_face_map = {

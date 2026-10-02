@@ -93,14 +93,16 @@ async def forward_device(host_device, target_device):
             else:
                 if key_event.keystate == evdev.KeyEvent.key_down:
                     try:
-                        if (k := ev_face_modifier_map.get(key_event.scancode)) is not None:
+                        if ((k := ev_face_modifier_map.get(key_event.scancode))
+                                is not None):
                             target_device.modifier_down(k)
                         target_device.key_down(ev_face_map[key_event.scancode])
                     except KeyError:
                         pass
                 elif key_event.keystate == evdev.KeyEvent.key_up:
                     try:
-                        if (k := ev_face_modifier_map.get(key_event.scancode)) is not None:
+                        if ((k := ev_face_modifier_map.get(key_event.scancode))
+                                is not None):
                             target_device.modifier_up(k)
                         target_device.key_up(ev_face_map[key_event.scancode])
                     except KeyError:
